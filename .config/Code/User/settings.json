@@ -1,0 +1,28 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "workbench.settings.editor": "json",
+
+// Format a file on save. A formatter must be available,
+// the file must not be saved after delay, and the editor
+//  must not be shutting down.
+  "editor.formatOnSave": true,
+
+//  // Controls [auto save](https://code.visualstudio.com/docs/
+//  editor/codebasics#_save-auto-save) of editors that have unsaved changes.
+//   //  - off: An editor with changes is never automatically 
+//   aved.
+//   //  - afterDelay: An editor with changes is automatically 
+//   saved after the configured `files.autoSaveDelay`.
+//   //  - onFocusChange: An editor with changes is 
+//   automatically saved when the editor loses focus.
+//   //  - onWindowChange: An editor with changes is 
+//   automatically saved when the window loses focus.
+  "files.autoSave": "onFocusChange", 
+
+  "editor.fontFamily": "source code pro",
+  "editor.fontSize": 15,
+
+  "terminal.integrated.fontFamily": "source code pro",
+  "terminal.integrated.fontSize": 15,
+  "workbench.startupEditor": "none",
+}
