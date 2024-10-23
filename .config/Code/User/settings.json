@@ -25,4 +25,5 @@
   "terminal.integrated.fontFamily": "source code pro",
   "terminal.integrated.fontSize": 15,
   "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false,
 }
