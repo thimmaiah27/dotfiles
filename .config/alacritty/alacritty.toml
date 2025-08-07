@@ -1,0 +1,40 @@
+[ window ]
+padding = { x = 10, y = 10 }
+
+[font]
+size = 12.0
+# Normal (roman) font face
+normal = { family = "source code pro", style = "Regular" }
+
+# Bold font face
+bold = { family = "source code pro", style = "Bold" }
+
+# Italic font face
+italic = { family = "source code pro", style = "Italic" }
+
+# Bold italic font face
+bold_italic = { family = "source code pro", style = "Bold Italic" }
+
+[colors.primary]
+background = "#1a1b1c"
+foreground = "#DADDE5"
+
+[colors.normal]
+black = "#151116"
+red = "#C93D42"
+green = "#1FBA82"
+yellow = "#DBDD25"
+blue = "#2D76CB"
+magenta = "#BE49BF"
+cyan = "#1EA7CF"
+white = "#DADDE5"
+
+[colors.bright]
+black = "#686B72"
+red = "#F05559"
+green = "#30CC93"
+yellow = "#E9EB53"
+blue = "#428EE9"
+magenta = "#D676D6"
+cyan = "#32B5DC"
+white = "#DBDDE5"
