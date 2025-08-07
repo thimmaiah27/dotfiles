@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "battery",
+        "custom/lock",
+        "tray"
+    ],
+    "custom/lock": {
+        "format": "",
+        "tooltip": "Lock Screen",
+        "on-click": "hyprlock",
+        "on-click-right": "notify-send 'Lock' 'Click to lock the screen'",
+        "interval": 9999
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": []
+        }
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d-%m-%Y %H:%M}"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {percentage}%"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": " BAT {capacity}%"
+    },
+    "network": {
+        "format-wifi": " ({signalStrength}%)",
+        "format-ethernet": "󰈁",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": ""
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
