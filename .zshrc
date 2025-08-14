@@ -4,29 +4,63 @@
 #%B%F{#ff5f00}%n%f%F{white}@%f%F{#87ff00}%M%f %F{white}in%f %F{#00ff87}%2~%f     
 #%F{white}$%f %b"
 
+
+
+
+
+# prompt spaceship
+# Spaceship prompt configuration
 autoload -U promptinit; promptinit
 
-# SPACESHIP_USER_SHOW=always 
+# function to show python virtual environment
+function spaceship_venv() {
+  [[ $SPACESHIP_VENV_SHOW == false ]] && return
+  [[ -z $VIRTUAL_ENV ]] && return
 
+  local venv_name=$(basename "$VIRTUAL_ENV")
+  spaceship::section \
+    --color "$SPACESHIP_VENV_COLOR" \
+    --prefix "$SPACESHIP_VENV_PREFIX" \
+    --suffix "$SPACESHIP_VENV_SUFFIX" \
+    --symbol "$SPACESHIP_VENV_SYMBOL" \
+    "$venv_name"
+}
+
+
+SPACESHIP_VENV_SHOW=true
+SPACESHIP_VENV_PREFIX="("
+SPACESHIP_VENV_SUFFIX=") "
+SPACESHIP_VENV_COLOR="cyan"
+SPACESHIP_VENV_SYMBOL=""
 
 SPACESHIP_PROMPT_ORDER=(
   user
   dir
   git
+  venv
+  python      
   node
-  python
   exec_time
   line_sep 
   exit_code
   char
 )
 
+# Configure python section to show virtual environment
+SPACESHIP_PYTHON_SHOW=true
+SPACESHIP_PYTHON_ASYNC=false
+SPACESHIP_PYTHON_PREFIX="via "
+SPACESHIP_PYTHON_SUFFIX=" "
+SPACESHIP_PYTHON_SYMBOL=" "
+SPACESHIP_PYTHON_COLOR="yellow"
 SPACESHIP_CHAR_SYMBOL="❯ "
 SPACESHIP_CHAR_COLOR_SUCCESS="green"
 SPACESHIP_CHAR_COLOR_FAILURE="red"
 
-
 prompt spaceship
+
+
+
 
 # History configuration
 HISTSIZE=10000
